@@ -21,41 +21,27 @@
 			</nav>
 		</header>
 		<main class="container">
-			<article class="vital_show mt-4">
-				<section>
-					<h2 class="border-bottom border-secondary pb-2 mb-4">バイタル一覧(月別)</h2>
+			<article class="vital_show">
+				<section class="mt-4">
+					<h2 class="border-bottom border-secondary pb-2 mb-3">バイタル一覧(月別)</h2>
 					<form action="">
 						<ul class="row list-unstyled">
-							<li class="col-md-4">
-								<label class="text-field">
-									<span class="text-field-label fs12">利用者</span>
-									<input class="text-field-input" type="text">
-								</label>
-							</li>
 							<li class="col-md-3">
 								<label class="text-field">
-									<span class="text-field-label fs12">年月</span>
-									<input class="text-field-input" type="month">
+									<span class="text-field-label">利用者</span>
+									<select class="text-field-input" name="name">
+										<option value="">-</option>
+										<option value="1">小国亮介</option>
+										<option value="2">山田太郎</option>
+										<option value="3">田中太郎</option>
+										<option value="4">鈴木一郎</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-2">
 								<label class="text-field">
-									<span class="text-field-label fs12">月</span>
-									<select class="text-field-input" name="month">
-										<option value="">-</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
-										<option value="10">10</option>
-										<option value="11">11</option>
-										<option value="12">12</option>
-									</select>
+									<span class="text-field-label">年月</span>
+									<input class="text-field-input" type="month" name="name">
 								</label>
 							</li>
 						</ul>

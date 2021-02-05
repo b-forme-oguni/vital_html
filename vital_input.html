@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="jquery/jquery.timepicker.css" />
+		<title>体調管理システム</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-dark">
+				<h1 class="h6 my-0"><a href="#" class="text-white">体調管理システム</a></h1>
+				<div class="dropdown">
+					<button class="navbar-toggler border-0" data-toggle="dropdown"><span class="navbar-toggler-icon"></span></button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item">バイタル登録</a>
+						<a href="#" class="dropdown-item">利用者登録</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="container">
+			<ul class="progressbar list-unstyled d-flex justify-content-center mt-4">
+				<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
+				<li class="w-25 position-relative text-center fs12">排泄記録</li>
+				<li class="w-25 position-relative text-center fs12">状態</li>
+				<li class="w-25 position-relative text-center fs12">確認</li>
+			</ul>
+			<article class="vital_input clearfix">
+				<section class="mt-4">
+					<h2 class="border-bottom border-secondary pb-2 mb-3">バイタル記録</h2>
+					<section class="mt-4">
+						<h3>利用者</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-4">
+								<label class="text-field">
+									<span class="text-field-label">名前</span>
+									<select class="text-field-input" name="user_id">
+										<option value="" disabled selected>-</option>
+										<option value="1">小国亮介</option>
+										<option value="2">山田太郎</option>
+										<option value="3">田中太郎</option>
+										<option value="4">鈴木一郎</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-2 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">年齢</span>
+									<p class="text-field-input">60</p>
+								</label>
+							</li>
+							<li class="col-md-2 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">性別</span>
+									<p class="text-field-input">男</p>
+								</label>
+							</li>
+							<li class="col-md-4">
+								<label class="text-field fill">
+									<span class="text-field-label">診断名</span>
+									<p class="text-field-input">脳性まひ</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>記録日／気候</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-4">
+								<label class="text-field">
+									<span class="text-field-label">日付</span>
+									<input class="text-field-input" type="date" name="weather_record_id">
+								</label>
+							</li>
+							<li class="col-md-4">
+								<label class="text-field fill">
+									<span class="text-field-label">天気</span>
+									<p class="text-field-input">曇り</p>
+								</label>
+							</li>
+							<li class="w-100"></li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">気温（外気）</span>
+									<p class="text-field-input">31℃</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">気温（内気）</span>
+									<p class="text-field-input">31℃</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">湿度（外気）</span>
+									<p class="text-field-input">70％</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">湿度（内気）</span>
+									<p class="text-field-input">60％</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>バイタル</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">体温</span>
+									<input class="text-field-input" type="number" name="body_temp">
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">脈拍</span>
+									<input class="text-field-input" type="number" name="pulse">
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">呼吸頻度</span>
+									<select class="text-field-input" name="breath">
+										<option value="" disabled selected>-</option>
+										<option value="1">多い</option>
+										<option value="2">ふつう</option>
+										<option value="3">少ない</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">SPO2</span>
+									<input class="text-field-input" type="number" name="spo2">
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">血圧（拡張）</span>
+									<input class="text-field-input" type="number" name="dbp">
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">血圧（収縮）</span>
+									<input class="text-field-input" type="number" name="sbp">
+								</label>
+							</li>
+							<li class="w-100"></li>
+							<li class="col-md-12">
+								<label class="text-field">
+									<span class="text-field-label">バイタル備考</span>
+									<input class="text-field-input" type="text" name="vital_note">
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>生活記録</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">体調</span>
+									<select class="text-field-input" name="condition">
+										<option value="">-</option>
+										<option value="1">よい</option>
+										<option value="2">ふつう</option>
+										<option value="3">よくない</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">機嫌</span>
+									<select class="text-field-input" name="mood">
+										<option value="" disabled selected>-</option>
+										<option value="1">よい</option>
+										<option value="2">ふつう</option>
+										<option value="3">よくない</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">睡眠</span>
+									<select class="text-field-input" name="sleep">
+										<option value="" disabled selected>-</option>
+										<option value="1">よく寝た</option>
+										<option value="2">時々起きた</option>
+										<option value="3">不眠</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">朝食</span>
+									<select class="text-field-input" name="breakfast">
+										<option value="" disabled selected>-</option>
+										<option value="1">食べた</option>
+										<option value="2">少し食べた</option>
+										<option value="3">食べていない</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">昼食</span>
+									<select class="text-field-input" name="lunch">
+										<option value="false">無</option>
+										<option value="true">有</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">昼食量</span>
+									<select class="text-field-input" name="lunch_amount">
+										<option value="" disabled selected>-</option>
+										<option value="1" disabled>1～3割</option>
+										<option value="2" disabled>4～6割</option>
+										<option value="3" disabled>7～9割</option>
+										<option value="4" disabled>10割</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">昼食開始時間</span>
+									<input type="time" class="timselect ui-timepicker-input text-field-input" step="600" name="lunch_start" readonly>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">昼食終了時間</span>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="lunch_end" >
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">おやつ</span>
+									<select class="text-field-input" name="snack">
+										<option value="false">無</option>
+										<option value="true">有</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">おやつ時間</span>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="snack_time">
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">摂取水分量</span>
+									<input class="text-field-input" type="number" name="water_intake">
+								</label>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<div class="form-footer mt-2 mb-5 float-right">
+					<button class="btn btn-secondary">戻る</button>
+					<button class="btn btn-primary">次へ</button>
+				</div>
+			</article>
+		</main>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="jquery/jquery.timepicker.js"></script>
+		<script>
+			$(function () {
+				$('.timeselect').timepicker({
+					timeFormat: 'H:i',
+					maxTime: '23:50',
+					show2400: true,'step': 10
+				});
+			});
+		</script>
+	</body>
+</html>

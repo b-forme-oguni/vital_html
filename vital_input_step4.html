@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="jquery/jquery.timepicker.css" />
+		<title>体調管理システム</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-dark">
+				<h1 class="h6 my-0"><a href="#" class="text-white">体調管理システム</a></h1>
+				<div class="dropdown">
+					<button class="navbar-toggler border-0" data-toggle="dropdown"><span class="navbar-toggler-icon"></span></button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item">バイタル登録</a>
+						<a href="#" class="dropdown-item">利用者登録</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="container">
+			<ul class="progressbar list-unstyled d-flex justify-content-center mt-4">
+				<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
+				<li class="w-25 position-relative text-center fs12 active">排泄記録</li>
+				<li class="w-25 position-relative text-center fs12 active">状態</li>
+				<li class="w-25 position-relative text-center fs12 active">確認</li>
+			</ul>
+			<article class="vital_input clearfix">
+				<section class="mt-4">
+					<h2 class="border-bottom border-secondary pb-2 mb-3">確認</h2>
+					<section class="mt-4">
+						<h3>利用者</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-4">
+								<label class="text-field fill">
+									<span class="text-field-label">名前</span>
+									<p class="text-field-input">山田太郎</p>
+								</label>
+							</li>
+							<li class="col-md-2 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">年齢</span>
+									<p class="text-field-input">60</p>
+								</label>
+							</li>
+							<li class="col-md-2 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">性別</span>
+									<p class="text-field-input">男</p>
+								</label>
+							</li>
+							<li class="col-md-4">
+								<label class="text-field fill">
+									<span class="text-field-label">診断名</span>
+									<p class="text-field-input">脳性まひ</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>記録日／気候</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-4">
+								<label class="text-field fill">
+									<span class="text-field-label">日付</span>
+									<p class="text-field-input">2020/07/26</p>
+								</label>
+							</li>
+							<li class="col-md-4">
+								<label class="text-field fill">
+									<span class="text-field-label">天気</span>
+									<p class="text-field-input">曇り</p>
+								</label>
+							</li>
+							<li class="w-100"></li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">気温（外気）</span>
+									<p class="text-field-input">31℃</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">気温（内気）</span>
+									<p class="text-field-input">31℃</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">湿度（外気）</span>
+									<p class="text-field-input">70％</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">湿度（内気）</span>
+									<p class="text-field-input">60％</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>バイタル</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">体温</span>
+									<p class="text-field-input">36.5℃</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">脈拍</span>
+									<p class="text-field-input">90</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">呼吸頻度</span>
+									<p class="text-field-input">ふつう</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">SPO2</span>
+									<p class="text-field-input">120</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">血圧（拡張）</span>
+									<p class="text-field-input">80</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">血圧（収縮）</span>
+									<p class="text-field-input">120</p>
+								</label>
+							</li>
+							<li class="w-100"></li>
+							<li class="col-md-12">
+								<label class="text-field fill">
+									<span class="text-field-label">バイタル備考</span>
+									<p class="text-field-input">特になし</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>生活記録</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">体調</span>
+									<p class="text-field-input">よい</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">機嫌</span>
+									<p class="text-field-input">よくない</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">睡眠</span>
+									<p class="text-field-input">時々起きた</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">朝食</span>
+									<p class="text-field-input">少し食べた</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">昼食</span>
+									<p class="text-field-input">有</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">昼食量</span>
+									<p class="text-field-input">7～9割</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">昼食開始時間</span>
+									<p class="text-field-input">12:30</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">昼食終了時間</span>
+									<p class="text-field-input">13:30</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">おやつ</span>
+									<p class="text-field-input">有</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">おやつ時間</span>
+									<p class="text-field-input">15:30</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">摂取水分量</span>
+									<p class="text-field-input">50～100ml</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>排尿記録</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-12 no-gutters">
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排尿量１</span>
+											<p class="text-field-input">多い</p>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排尿時間１</span>
+											<p class="text-field-input">10:30</p>
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排尿その他１</span>
+											<p class="text-field-input">特になし</p>
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排尿量２</span>
+											<p class="text-field-input">ふつう</p>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排尿時間２</span>
+											<p class="text-field-input">16:30</p>
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排尿その他２</span>
+											<p class="text-field-input">特になし</p>
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排尿量３</span>
+											<p class="text-field-input">ない</p>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排尿時間３</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排尿その他３</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>排便記録</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-12 no-gutters">
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排便量１</span>
+											<p class="text-field-input">少ない</p>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排便時間１</span>
+											<p class="text-field-input">18:20</p>
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排便その他１</span>
+											<p class="text-field-input">特になし</p>
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排便量２</span>
+											<p class="text-field-input">ない</p>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排便時間２</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排便その他２</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排便量３</span>
+											<p class="text-field-input">ない</p>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排便時間３</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field fill">
+											<span class="text-field-label">排便その他３</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li class="col-md-3">
+								<label class="text-field fill">
+									<span class="text-field-label">排便量合計（g）</span>
+									<p class="text-field-input">320g</p>
+								</label>
+							</li>
+							<li class="w-100"></li>
+							<li class="col-md-12">
+								<label class="text-field fill">
+									<span class="text-field-label">排泄備考</span>
+									<p class="text-field-input">特になし</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>服薬／嘔吐</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">服薬</span>
+									<p class="text-field-input">有</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">服薬時間</span>
+									<p class="text-field-input">12:10</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">嘔吐</span>
+									<p class="text-field-input">有</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">嘔吐時間</span>
+									<p class="text-field-input">12:50</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>発作</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-12 no-gutters">
+								<ul class="row list-unstyled">
+									<li class="col-md-3">
+										<label class="text-field fill">
+											<span class="text-field-label">発作１</span>
+											<p class="text-field-input">ふつう</p>
+										</label>
+									</li>
+									<li class="col-md-2 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">発作時間１</span>
+											<p class="text-field-input">9:50</p>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">発作継続時間１</span>
+											<p class="text-field-input">30～60秒</p>
+										</label>
+									</li>
+									<li class="col-md-4">
+										<label class="text-field fill">
+											<span class="text-field-label">その他１</span>
+											<p class="text-field-input">特になし</p>
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3">
+										<label class="text-field fill">
+											<span class="text-field-label">発作２</span>
+											<p class="text-field-input">ない</p>
+										</label>
+									</li>
+									<li class="col-md-2 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">発作時間２</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">発作継続時間２</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+									<li class="col-md-4">
+										<label class="text-field fill">
+											<span class="text-field-label">その他２</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3">
+										<label class="text-field fill">
+											<span class="text-field-label">発作３</span>
+											<p class="text-field-input">ない</p>
+										</label>
+									</li>
+									<li class="col-md-2 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">発作時間３</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field fill">
+											<span class="text-field-label">発作継続時間３</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+									<li class="col-md-4">
+										<label class="text-field fill">
+											<span class="text-field-label">その他３</span>
+											<p class="text-field-input"></p>
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>吸引</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-15">
+								<label class="text-field fill">
+									<span class="text-field-label">吸引</span>
+									<p class="text-field-input">有</p>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">吸引時間</span>
+									<p class="text-field-input">14:10</p>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">吸引場所</span>
+									<p class="text-field-input">気管カニューレ</p>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">吸引物色</span>
+									<p class="text-field-input">赤褐色</p>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">吸引質</span>
+									<p class="text-field-input">膿性</p>
+								</label>
+							</li>
+							<li class="col-md-12">
+								<label class="text-field fill">
+									<span class="text-field-label">吸引備考</span>
+									<p class="text-field-input">特になし</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>注入</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-15">
+								<label class="text-field fill">
+									<span class="text-field-label">注入</span>
+									<p class="text-field-input">有</p>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">注入開始時間</span>
+									<p class="text-field-input">8:10</p>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">注入終了時間</span>
+									<p class="text-field-input">8:40</p>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">注入場所</span>
+									<p class="text-field-input">胃</p>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">注入量</span>
+									<p class="text-field-input">200～300ml</p>
+								</label>
+							</li>
+							<li class="col-md-12">
+								<label class="text-field fill">
+									<span class="text-field-label">注入備考</span>
+									<p class="text-field-input">特になし</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>むせ／歩数</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">むせ（回数）</span>
+									<p class="text-field-input">12回</p>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field fill">
+									<span class="text-field-label">歩数</span>
+									<p class="text-field-input">150～200歩</p>
+								</label>
+							</li>
+							<li class="col-md-12">
+								<label class="text-field fill">
+									<span class="text-field-label">注入備考</span>
+									<p class="text-field-input">特になし</p>
+								</label>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<div class="form-footer mt-2 mb-5 float-right">
+					<button class="btn btn-secondary">戻る</button>
+					<button class="btn btn-primary">次へ</button>
+				</div>
+			</article>
+		</main>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="jquery/jquery.timepicker.js"></script>
+		<script>
+			$(function () {
+				$('.timeselect').timepicker({
+					timeFormat: 'H:i',
+					maxTime: '23:50',
+					show2400: true,'step': 10
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="jquery/jquery.timepicker.css" />
+		<title>体調管理システム</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-dark">
+				<h1 class="h6 my-0"><a href="#" class="text-white">体調管理システム</a></h1>
+				<div class="dropdown">
+					<button class="navbar-toggler border-0" data-toggle="dropdown"><span class="navbar-toggler-icon"></span></button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item">バイタル登録</a>
+						<a href="#" class="dropdown-item">利用者登録</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="container">
+			<ul class="progressbar list-unstyled d-flex justify-content-center mt-4">
+				<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
+				<li class="w-25 position-relative text-center fs12 active">排泄記録</li>
+				<li class="w-25 position-relative text-center fs12">状態</li>
+				<li class="w-25 position-relative text-center fs12">確認</li>
+			</ul>
+			<article class="vital_input clearfix">
+				<section class="mt-4">
+					<h2 class="border-bottom border-secondary pb-2 mb-3">排泄記録</h2>
+					<section class="mt-4">
+						<h3>排尿記録</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-12 no-gutters">
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排尿量１</span>
+											<select class="text-field-input" name="voiding_vol1">
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排尿時間１</span>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="voiding_time1">
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field">
+											<span class="text-field-label">排尿その他１</span>
+											<input class="text-field-input" type="text" name="voiding_memo1">
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排尿量２</span>
+											<select class="text-field-input" name="voiding_vol2">
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排尿時間２</span>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="voiding_time2">
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field">
+											<span class="text-field-label">排尿その他２</span>
+											<input class="text-field-input" type="text" name="voiding_memo2">
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排尿量３</span>
+											<select class="text-field-input" name="voiding_vol3">
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排尿時間３</span>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="voiding_time33">
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field">
+											<span class="text-field-label">排尿その他３</span>
+											<input class="text-field-input" type="text" name="voiding_memo3">
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>排便記録</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-12 no-gutters">
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排便量１</span>
+											<select class="text-field-input" name="defecation_vol1">
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排便時間１</span>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="defecation_time1">
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field">
+											<span class="text-field-label">排便その他１</span>
+											<input class="text-field-input" type="text" name="defecation_memo1">
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排便量２</span>
+											<select class="text-field-input" name="defecation_vol2">
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排便時間２</span>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="defecation_time2">
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field">
+											<span class="text-field-label">排便その他２</span>
+											<input class="text-field-input" type="text" name="defecation_memo2">
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排便量３</span>
+											<select class="text-field-input" name="defecation_vol3">
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">排便時間３</span>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="defecation_time33">
+										</label>
+									</li>
+									<li class="col-md-6">
+										<label class="text-field">
+											<span class="text-field-label">排便その他３</span>
+											<input class="text-field-input" type="text" name="defecation_memo3">
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li class="col-md-3">
+								<label class="text-field">
+									<span class="text-field-label">排便量合計（g）</span>
+									<input class="text-field-input" type="number" name="total_defecation">
+								</label>
+							</li>
+							<li class="w-100"></li>
+							<li class="col-md-12">
+								<label class="text-field">
+									<span class="text-field-label">排泄備考</span>
+									<input class="text-field-input" type="text" name="excretion_note">
+								</label>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<div class="form-footer mt-2 mb-5 float-right">
+					<button class="btn btn-secondary">戻る</button>
+					<button class="btn btn-primary">次へ</button>
+				</div>
+			</article>
+		</main>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="jquery/jquery.timepicker.js"></script>
+		<script>
+			$(function () {
+				$('.timeselect').timepicker({
+					timeFormat: 'H:i',
+					maxTime: '23:50',
+					show2400: true,'step': 10
+				});
+			});
+		</script>
+	</body>
+</html>

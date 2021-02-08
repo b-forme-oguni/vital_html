@@ -238,7 +238,7 @@
 							<li class="col-md-3 col-6">
 								<label class="text-field">
 									<span class="text-field-label">昼食終了時間</span>
-									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="lunch_end" >
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="lunch_end">
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
@@ -259,7 +259,16 @@
 							<li class="col-md-3 col-6">
 								<label class="text-field">
 									<span class="text-field-label">摂取水分量</span>
-									<input class="text-field-input" type="number" name="water_intake">
+									<select class="text-field-input" name="water_intake">
+										<option value="" disabled selected>-</option>
+										<option value="1">0～50ml</option>
+										<option value="2">50～100ml</option>
+										<option value="3">100～150ml</option>
+										<option value="4">150～200ml</option>
+										<option value="5">200～300ml</option>
+										<option value="6">300～400ml</option>
+										<option value="7">500ml～</option>
+									</select>
 								</label>
 							</li>
 						</ul>

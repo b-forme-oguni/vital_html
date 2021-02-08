@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="jquery/jquery.timepicker.css" />
+		<title>体調管理システム</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-dark">
+				<h1 class="h6 my-0"><a href="#" class="text-white">体調管理システム</a></h1>
+				<div class="dropdown">
+					<button class="navbar-toggler border-0" data-toggle="dropdown"><span class="navbar-toggler-icon"></span></button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item">バイタル登録</a>
+						<a href="#" class="dropdown-item">利用者登録</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="container">
+			<ul class="progressbar list-unstyled d-flex justify-content-center mt-4">
+				<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
+				<li class="w-25 position-relative text-center fs12 active">排泄記録</li>
+				<li class="w-25 position-relative text-center fs12 active">状態</li>
+				<li class="w-25 position-relative text-center fs12">確認</li>
+			</ul>
+			<article class="vital_input clearfix">
+				<section class="mt-4">
+					<h2 class="border-bottom border-secondary pb-2 mb-3">状態</h2>
+					<section class="mt-4">
+						<h3>服薬／嘔吐</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">服薬</span>
+									<select class="text-field-input" name="medicine">
+										<option value="false">無</option>
+										<option value="true">有</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">服薬時間</span>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="medicine_time">
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">嘔吐</span>
+									<select class="text-field-input" name="vomiting">
+										<option value="false">無</option>
+										<option value="true">有</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">嘔吐時間</span>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="vomiting_time">
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>発作</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-12 no-gutters">
+								<ul class="row list-unstyled">
+									<li class="col-md-3">
+										<label class="text-field">
+											<span class="text-field-label">発作１</span>
+											<select class="text-field-input" name="attack1">
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-2 col-6">
+										<label class="text-field">
+											<span class="text-field-label">発作時間１</span>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="attack_time1">
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">発作継続時間１</span>
+											<select class="text-field-input" name="attack_duration1">
+												<option value="" disabled selected>-</option>
+												<option value="1">～5秒</option>
+												<option value="2">5～10秒</option>
+												<option value="3">10～15秒</option>
+												<option value="4">15～30秒</option>
+												<option value="5">30～60秒</option>
+												<option value="6">60秒～</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-4">
+										<label class="text-field">
+											<span class="text-field-label">その他１</span>
+											<input class="text-field-input" type="text" name="attack_memo1">
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3">
+										<label class="text-field">
+											<span class="text-field-label">発作２</span>
+											<select class="text-field-input" name="attack2">
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-2 col-6">
+										<label class="text-field">
+											<span class="text-field-label">発作時間２</span>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="attack_time2">
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">発作継続時間２</span>
+											<select class="text-field-input" name="attack_duration2">
+												<option value="" disabled selected>-</option>
+												<option value="1">～5秒</option>
+												<option value="2">5～10秒</option>
+												<option value="3">10～15秒</option>
+												<option value="4">15～30秒</option>
+												<option value="5">30～60秒</option>
+												<option value="6">60秒～</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-4">
+										<label class="text-field">
+											<span class="text-field-label">その他２</span>
+											<input class="text-field-input" type="text" name="attack_memo2">
+										</label>
+									</li>
+								</ul>
+								<ul class="row list-unstyled">
+									<li class="col-md-3">
+										<label class="text-field">
+											<span class="text-field-label">発作３</span>
+											<select class="text-field-input" name="attack3">
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-2 col-6">
+										<label class="text-field">
+											<span class="text-field-label">発作時間３</span>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="attack_time3">
+										</label>
+									</li>
+									<li class="col-md-3 col-6">
+										<label class="text-field">
+											<span class="text-field-label">発作継続時間３</span>
+											<select class="text-field-input" name="attack_duration3">
+												<option value="" disabled selected>-</option>
+												<option value="1">～5秒</option>
+												<option value="2">5～10秒</option>
+												<option value="3">10～15秒</option>
+												<option value="4">15～30秒</option>
+												<option value="5">30～60秒</option>
+												<option value="6">60秒～</option>
+											</select>
+										</label>
+									</li>
+									<li class="col-md-4">
+										<label class="text-field">
+											<span class="text-field-label">その他３</span>
+											<input class="text-field-input" type="text" name="attack_memo3">
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>吸引</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-15">
+								<label class="text-field">
+									<span class="text-field-label">吸引</span>
+									<select class="text-field-input" name="aspiration">
+										<option value="false">無</option>
+										<option value="true">有</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field">
+									<span class="text-field-label">吸引時間</span>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="aspiration_time">
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field">
+									<span class="text-field-label">吸引場所</span>
+									<select class="text-field-input" name="aspiration_point">
+										<option value="" disabled selected>-</option>
+										<option value="1">口</option>
+										<option value="2">鼻</option>
+										<option value="3">気管カニューレ</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field">
+									<span class="text-field-label">吸引物色</span>
+									<select class="text-field-input" name="aspiration_color">
+										<option value="" disabled selected>-</option>
+										<option value="1">透明</option>
+										<option value="2">白</option>
+										<option value="3">黄</option>
+										<option value="4">緑</option>
+										<option value="5">赤褐色</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field">
+									<span class="text-field-label">吸引質</span>
+									<select class="text-field-input" name="aspiration_type">
+										<option value="" disabled selected>-</option>
+										<option value="1">しょう液性</option>
+										<option value="2">粘ちょう性</option>
+										<option value="3">膿性</option>
+										<option value="4">血性</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-12">
+								<label class="text-field">
+									<span class="text-field-label">吸引備考</span>
+									<input class="text-field-input" type="text" name="aspiration_note">
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>注入</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-15">
+								<label class="text-field">
+									<span class="text-field-label">注入</span>
+									<select class="text-field-input" name="injection">
+										<option value="false">無</option>
+										<option value="true">有</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field">
+									<span class="text-field-label">注入開始時間</span>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="injection_start">
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field">
+									<span class="text-field-label">注入終了時間</span>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="injection_end">
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field">
+									<span class="text-field-label">注入場所</span>
+									<select class="text-field-input" name="injection_point">
+										<option value="" disabled selected>-</option>
+										<option value="1">鼻</option>
+										<option value="2">胃</option>
+										<option value="3">腸</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-15 col-6">
+								<label class="text-field">
+									<span class="text-field-label">注入量</span>
+									<select class="text-field-input" name="injection_vol">
+										<option value="" disabled selected>-</option>
+										<option value="1">0～50ml</option>
+										<option value="2">50～100ml</option>
+										<option value="3">100～150ml</option>
+										<option value="4">150～200ml</option>
+										<option value="5">200～300ml</option>
+										<option value="6">300～400ml</option>
+										<option value="7">500ml～</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-12">
+								<label class="text-field">
+									<span class="text-field-label">注入備考</span>
+									<input class="text-field-input" type="text" name="injection_note">
+								</label>
+							</li>
+						</ul>
+					</section>
+					<section class="mt-4">
+						<h3>むせ／歩数</h3>
+						<ul class="row list-unstyled">
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">むせ（回数）</span>
+									<input class="text-field-input" type="number" name="choke">
+								</label>
+							</li>
+							<li class="col-md-3 col-6">
+								<label class="text-field">
+									<span class="text-field-label">歩数</span>
+									<select class="text-field-input" name="step">
+										<option value="" disabled selected>-</option>
+										<option value="1">0～50歩</option>
+										<option value="2">50～100歩</option>
+										<option value="3">100～150歩</option>
+										<option value="4">150～200歩</option>
+										<option value="5">200～300歩</option>
+										<option value="6">300～400歩</option>
+										<option value="7">500～1000歩</option>
+										<option value="8">1000歩～</option>
+									</select>
+								</label>
+							</li>
+							<li class="col-md-12">
+								<label class="text-field">
+									<span class="text-field-label">注入備考</span>
+									<input class="text-field-input" type="text" name="medical_note">
+								</label>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<div class="form-footer mt-2 mb-5 float-right">
+					<button class="btn btn-secondary">戻る</button>
+					<button class="btn btn-primary">次へ</button>
+				</div>
+			</article>
+		</main>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="jquery/jquery.timepicker.js"></script>
+		<script>
+			$(function () {
+				$('.timeselect').timepicker({
+					timeFormat: 'H:i',
+					maxTime: '23:50',
+					show2400: true,'step': 10
+				});
+			});
+		</script>
+	</body>
+</html>

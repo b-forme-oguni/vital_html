@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="style.css">
 		<title>体調管理システム</title>
 	</head>
-	<body class="modal-open">
+	<body>
 		<header>
 			<nav class="navbar navbar-dark">
 				<h1 class="h6 my-0"><a href="#" class="text-white">体調管理システム</a></h1>
@@ -122,16 +122,16 @@
 			</article>
 		</main>
 		<!-- Modal -->
-		<div class="modal in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block; padding-left: 0px;">
+		<div class="modal fade" id="userregistModal" tabindex="-1" role="dialog" aria-labelledby="userregistModalLabel">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">利用者登録完了</h5>
+						<h5 class="modal-title" id="userregistModalLabel">利用者登録完了</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body clearfix">
+					<div class="modal-body">
 						<p>"山田太郎"を登録しました</p>
 					</div>
 				</div>
@@ -142,7 +142,7 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script>
 			$(window).on('load',function () {
-				$('#myModal').modal('show');
+				$('#userregistModal').modal('show');
 			});
 		</script>
 	</body>

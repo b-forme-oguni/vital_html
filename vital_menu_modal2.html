@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="style.css">
 		<title>体調管理システム</title>
 	</head>
-	<body class="modal-open">
+	<body>
 		<header>
 			<nav class="navbar navbar-dark">
 				<h1 class="h6 my-0"><a href="#" class="text-white">体調管理システム</a></h1>
@@ -35,7 +35,7 @@
 				</section>
 				<section class="mt-4 col-md-10">
 					<h2 class="border-bottom border-secondary pb-2 mb-3">気候情報</h2>
-					<p>本日は<u class="mx-3 font-weight-bold  fs18"></u>です。</p>
+					<p>本日は<u class="mx-2 font-weight-bold fs18"></u>です。</p>
 					<div class="row">
 						<dl class="col-6 col-sm-4 col-md-15">
 							<dt class="font-weight-normal d-inline-block">天　候：</dt>
@@ -62,17 +62,17 @@
 			</article>
 		</main>
 		<!-- Modal -->
-		<div class="modal in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block; padding-left: 0px;">
+		<div class="modal fade" id="vitalregistModal" tabindex="-1" role="dialog" aria-labelledby="vitalregistModalLabel">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">バイタル登録完了</h5>
+						<h5 class="modal-title" id="vitalregistModalLabel">バイタル登録完了</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body clearfix">
-						<p>2020年07月24日（金）</p>
+					<div class="modal-body">
+						<p>2020年07月24日(金)</p>
 						<p>"山田太郎"さんのバイタル情報を登録しました</p>
 					</div>
 				</div>
@@ -83,7 +83,7 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script>
 			$(window).on('load',function () {
-				$('#myModal').modal('show');
+				$('#vitalregistModal').modal('show');
 			});
 		</script>
 	</body>

@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="style.css">
 		<title>体調管理システム</title>
 	</head>
-	<body class="modal-open">
+	<body>
 		<header>
 			<nav class="navbar navbar-dark">
 				<h1 class="h6 my-0"><a href="#" class="text-white">体調管理システム</a></h1>
@@ -35,7 +35,7 @@
 				</section>
 				<section class="mt-4 col-md-10">
 					<h2 class="border-bottom border-secondary pb-2 mb-3">気候情報</h2>
-					<p>本日は<u class="mx-3 font-weight-bold  fs18"></u>です。</p>
+					<p>本日は<u class="mx-2 font-weight-bold fs18"></u>です。</p>
 					<div class="row">
 						<dl class="col-6 col-sm-4 col-md-15">
 							<dt class="font-weight-normal d-inline-block">天　候：</dt>
@@ -62,12 +62,12 @@
 			</article>
 		</main>
 		<!-- Modal -->
-		<div class="modal in" data-backdrop="static" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block; padding-left: 0px;">
+		<div class="modal fade" id="weatherModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="weatherModalLabel">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
-					<div class="modal-body clearfix">
-						<p>本日は<u class="mx-3 font-weight-bold  fs18">2020年07月24日（金）</u>です。</p>
+					<div class="modal-body">
 						<div class="row">
+							<p class="col-md-12">本日は<u class="mx-2 font-weight-bold fs18">2020年07月24日(金)</u>です。</p>
 							<dl class="col-md-4">
 								<dt class="font-weight-normal d-inline-block">天　候：</dt>
 								<dd class="d-inline-block"><u class="font-weight-bold fs18">晴れ</u></dd>
@@ -85,17 +85,17 @@
 							<li class="col-md-6">
 								<label class="text-field">
 									<span class="text-field-label">内気温(℃)</span>
-									<input class="text-field-input" type="number" name="body_temp">
+									<input class="text-field-input" type="number" name="room_temp">
 								</label>
 							</li>
 							<li class="col-md-6">
 								<label class="text-field">
 									<span class="text-field-label">内湿度(％)</span>
-									<input class="text-field-input" type="number" name="pulse">
+									<input class="text-field-input" type="number" name="room_humidity">
 								</label>
 							</li>
 						</ul>
-						<div class="form-footer float-right">
+						<div class="text-right">
 							<button type="button" class="btn btn-secondary fs14">戻る</button>
 							<button type="button" class="btn btn-primary fs14" data-dismiss="modal" aria-label="Close">登録</button>
 						</div>
@@ -108,7 +108,7 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script>
 			$(window).on('load',function () {
-				$('#myModal').modal('show');
+				$('#weatherModal').modal('show');
 			});
 		</script>
 	</body>

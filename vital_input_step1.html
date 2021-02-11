@@ -22,14 +22,14 @@
 			</nav>
 		</header>
 		<main class="container">
-			<ul class="progressbar list-unstyled d-flex justify-content-center mt-4">
-				<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
-				<li class="w-25 position-relative text-center fs12">排泄記録</li>
-				<li class="w-25 position-relative text-center fs12">状態</li>
-				<li class="w-25 position-relative text-center fs12">確認</li>
-			</ul>
-			<article class="vital_input clearfix">
-				<section class="mt-4">
+			<article class="vital_input row justify-content-center">
+				<section class="mt-4 col-md-10">
+					<ul class="progressbar list-unstyled d-flex justify-content-center">
+						<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
+						<li class="w-25 position-relative text-center fs12">排泄記録</li>
+						<li class="w-25 position-relative text-center fs12">状態</li>
+						<li class="w-25 position-relative text-center fs12">確認</li>
+					</ul>
 					<h2 class="border-bottom border-secondary pb-2 mb-3">バイタル記録</h2>
 					<section class="mt-4">
 						<h3>利用者</h3>
@@ -84,26 +84,26 @@
 							<li class="w-100"></li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">気温（外気）</span>
-									<p class="text-field-input">31℃</p>
+									<span class="text-field-label">外気温(℃)</span>
+									<p class="text-field-input">31</p>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">気温（内気）</span>
-									<p class="text-field-input">31℃</p>
+									<span class="text-field-label">内気温(℃)</span>
+									<p class="text-field-input">31</p>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">湿度（外気）</span>
-									<p class="text-field-input">70％</p>
+									<span class="text-field-label">外湿度(％)</span>
+									<p class="text-field-input">70</p>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">湿度（内気）</span>
-									<p class="text-field-input">60％</p>
+									<span class="text-field-label">内湿度(％)</span>
+									<p class="text-field-input">60</p>
 								</label>
 							</li>
 						</ul>
@@ -113,13 +113,13 @@
 						<ul class="row list-unstyled">
 							<li class="col-md-3 col-6">
 								<label class="text-field">
-									<span class="text-field-label">体温</span>
+									<span class="text-field-label">体温(℃)</span>
 									<input class="text-field-input" type="number" name="body_temp">
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field">
-									<span class="text-field-label">脈拍</span>
+									<span class="text-field-label">脈拍(bpm)</span>
 									<input class="text-field-input" type="number" name="pulse">
 								</label>
 							</li>
@@ -136,19 +136,19 @@
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field">
-									<span class="text-field-label">SPO2</span>
+									<span class="text-field-label">SPO2(％)</span>
 									<input class="text-field-input" type="number" name="spo2">
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field">
-									<span class="text-field-label">血圧（拡張）</span>
+									<span class="text-field-label">血圧(拡張)</span>
 									<input class="text-field-input" type="number" name="dbp">
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field">
-									<span class="text-field-label">血圧（収縮）</span>
+									<span class="text-field-label">血圧(収縮)</span>
 									<input class="text-field-input" type="number" name="sbp">
 								</label>
 							</li>
@@ -168,7 +168,7 @@
 								<label class="text-field">
 									<span class="text-field-label">体調</span>
 									<select class="text-field-input" name="condition">
-										<option value="">-</option>
+										<option value="" disabled selected>-</option>
 										<option value="1">よい</option>
 										<option value="2">ふつう</option>
 										<option value="3">よくない</option>
@@ -220,19 +220,19 @@
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">昼食量</span>
-									<select class="text-field-input" name="lunch_amount">
+									<select class="text-field-input" name="lunch_amount" disabled>
 										<option value="" disabled selected>-</option>
-										<option value="1" disabled>1～3割</option>
-										<option value="2" disabled>4～6割</option>
-										<option value="3" disabled>7～9割</option>
-										<option value="4" disabled>10割</option>
+										<option value="1">1～3割</option>
+										<option value="2">4～6割</option>
+										<option value="3">7～9割</option>
+										<option value="4">10割</option>
 									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">昼食開始時間</span>
-									<input type="time" class="timselect ui-timepicker-input text-field-input" step="600" name="lunch_start" readonly>
+									<input type="time" class="timselect ui-timepicker-input text-field-input" step="600" name="lunch_start" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
@@ -273,11 +273,11 @@
 							</li>
 						</ul>
 					</section>
+					<div class="form-footer mt-2 mb-5 text-right">
+						<button class="btn btn-secondary fs14">戻る</button>
+						<button class="btn btn-primary fs14">次へ</button>
+					</div>
 				</section>
-				<div class="form-footer mt-2 mb-5 float-right">
-					<button class="btn btn-secondary">戻る</button>
-					<button class="btn btn-primary">次へ</button>
-				</div>
 			</article>
 		</main>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

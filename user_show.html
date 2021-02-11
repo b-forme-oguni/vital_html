@@ -21,88 +21,81 @@
 			</nav>
 		</header>
 		<main class="container">
-			<article class="vital_show row justify-content-center">
+			<article class="user_show row justify-content-center">
 				<section class="mt-4 col-md-12">
-					<h2 class="border-bottom border-secondary pb-2 mb-3">バイタル一覧(月別)</h2>
-					<form action="">
-						<ul class="row list-unstyled">
-							<li class="col-md-4">
-								<label class="text-field">
-									<span class="text-field-label">利用者</span>
-									<select class="text-field-input" name="name">
-										<option value="">-</option>
-										<option value="1">小国亮介</option>
-										<option value="2">山田太郎</option>
-										<option value="3">田中太郎</option>
-										<option value="4">鈴木一郎</option>
-									</select>
-								</label>
-							</li>
-							<li class="col-md-3">
-								<label class="text-field">
-									<span class="text-field-label">年月</span>
-									<input class="text-field-input" type="month" name="name">
-								</label>
-							</li>
-						</ul>
-					</form>
-					<table class="table table-hover table-striped mt-3">
+					<h2 class="border-bottom border-secondary pb-2 mb-3">利用者一覧(全000件)</h2>
+					<ul class="list-unstyled d-flex">
+						<li class="border-secondary pr-3">
+							<button type="button" class="btn btn-primary fs14">利用者登録</button>
+						</li>
+					</ul>
+					<table class="table table-hover table-striped mt-3 fs14">
 						<thead>
 							<tr>
-								<th class="border-top-0">通所日</th>
-								<th class="border-top-0">天気</th>
-								<th class="border-top-0">体温</th>
-								<th class="border-top-0">体調</th>
-								<th class="border-top-0">機嫌</th>
-								<th class="border-top-0">睡眠</th>
-								<th class="border-top-0">朝食</th>
+								<th class="border-top-0 text-center"><button type="button" class="btn py-1 px-2 btn-danger fs14">削除</button></th>
+								<th class="border-top-0">ID</th>
+								<th class="border-top-0">名前</th>
+								<th class="border-top-0">年齢</th>
+								<th class="border-top-0">性別</th>
+								<th class="border-top-0">診断名</th>
+								<th class="border-top-0">登録日時</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>7/1</td>
-								<td>晴れ</td>
-								<td>36.1</td>
-								<td>よい</td>
-								<td>よくない</td>
-								<td>よく寝た</td>
-								<td>食べた</td>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>1</td>
+								<td>山田太郎</td>
+								<td>8</td>
+								<td>男</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
 							</tr>
 							<tr>
-								<td>7/6</td>
-								<td>曇り</td>
-								<td>36.5</td>
-								<td>ふつう</td>
-								<td>よい</td>
-								<td>時々起きた</td>
-								<td>食べた</td>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>2</td>
+								<td>山田花子</td>
+								<td>7</td>
+								<td>女</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
 							</tr>
 							<tr>
-								<td>7/11</td>
-								<td>小雨</td>
-								<td>37.1</td>
-								<td>よくない</td>
-								<td>よくない</td>
-								<td>よく寝た</td>
-								<td>食べた</td>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>3</td>
+								<td>鈴木一郎</td>
+								<td>6</td>
+								<td>男</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
 							</tr>
 							<tr>
-								<td>7/12</td>
-								<td>雨</td>
-								<td>36.2</td>
-								<td>よい</td>
-								<td>ふつう</td>
-								<td>不眠</td>
-								<td>食べた</td>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>4</td>
+								<td>田中太郎</td>
+								<td>5</td>
+								<td>男</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
 							</tr>
 							<tr>
-								<td>7/16</td>
-								<td>雪</td>
-								<td>37.5</td>
-								<td>ふつう</td>
-								<td>よい</td>
-								<td>時々起きた</td>
-								<td>食べた</td>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>5</td>
+								<td>佐々木小次郎</td>
+								<td>4</td>
+								<td>男</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
 							</tr>
 						</tbody>
 					</table>

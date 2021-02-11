@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+		<title>体調管理システム</title>
+	</head>
+	<body class="modal-open">
+		<header>
+			<nav class="navbar navbar-dark">
+				<h1 class="h6 my-0"><a href="#" class="text-white">体調管理システム</a></h1>
+				<div class="dropdown">
+					<button class="navbar-toggler border-0" data-toggle="dropdown"><span class="navbar-toggler-icon"></span></button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item">バイタル登録</a>
+						<a href="#" class="dropdown-item">利用者登録</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="container">
+			<article class="user_show row justify-content-center">
+				<section class="mt-4 col-md-12">
+					<h2 class="border-bottom border-secondary pb-2 mb-3">利用者一覧(全000件)</h2>
+					<ul class="list-unstyled d-flex">
+						<li class="border-secondary pr-3">
+							<button type="button" class="btn btn-primary fs14">利用者登録</button>
+						</li>
+					</ul>
+					<table class="table table-hover table-striped mt-3 fs14">
+						<thead>
+							<tr>
+								<th class="border-top-0 text-center"><button type="button" class="btn py-1 px-2 btn-danger fs14">削除</button></th>
+								<th class="border-top-0">ID</th>
+								<th class="border-top-0">名前</th>
+								<th class="border-top-0">年齢</th>
+								<th class="border-top-0">性別</th>
+								<th class="border-top-0">診断名</th>
+								<th class="border-top-0">登録日時</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>1</td>
+								<td>山田太郎</td>
+								<td>8</td>
+								<td>男</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>2</td>
+								<td>山田花子</td>
+								<td>7</td>
+								<td>女</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>3</td>
+								<td>鈴木一郎</td>
+								<td>6</td>
+								<td>男</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>4</td>
+								<td>田中太郎</td>
+								<td>5</td>
+								<td>男</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<div class="form-check text-center"><input type="checkbox" class="form-check-input position-static"></div>
+								</td>
+								<td>5</td>
+								<td>佐々木小次郎</td>
+								<td>4</td>
+								<td>男</td>
+								<td>脳性まひ</td>
+								<td>2020/10/06 15:00</td>
+							</tr>
+						</tbody>
+					</table>
+					<nav aria-label="Page navigation example" class="d-flex justify-content-center">
+						<ul class="pagination">
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+									<span class="sr-only">Previous</span>
+								</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+									<span class="sr-only">Next</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</section>
+			</article>
+		</main>
+		<!-- Modal -->
+		<div class="modal in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block; padding-left: 0px;">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">利用者登録完了</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body clearfix">
+						<p>"山田太郎"を登録しました</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script>
+			$(window).on('load',function () {
+				$('#myModal').modal('show');
+			});
+		</script>
+	</body>
+</html>

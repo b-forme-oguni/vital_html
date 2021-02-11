@@ -22,14 +22,14 @@
 			</nav>
 		</header>
 		<main class="container">
-			<ul class="progressbar list-unstyled d-flex justify-content-center mt-4">
-				<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
-				<li class="w-25 position-relative text-center fs12 active">排泄記録</li>
-				<li class="w-25 position-relative text-center fs12 active">状態</li>
-				<li class="w-25 position-relative text-center fs12">確認</li>
-			</ul>
-			<article class="vital_input clearfix">
-				<section class="mt-4">
+			<article class="vital_input row justify-content-center">
+				<section class="mt-4 col-md-10">
+					<ul class="progressbar list-unstyled d-flex justify-content-center">
+						<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
+						<li class="w-25 position-relative text-center fs12 active">排泄記録</li>
+						<li class="w-25 position-relative text-center fs12 active">状態</li>
+						<li class="w-25 position-relative text-center fs12">確認</li>
+					</ul>
 					<h2 class="border-bottom border-secondary pb-2 mb-3">状態</h2>
 					<section class="mt-4">
 						<h3>服薬／嘔吐</h3>
@@ -318,7 +318,7 @@
 						<ul class="row list-unstyled">
 							<li class="col-md-3 col-6">
 								<label class="text-field">
-									<span class="text-field-label">むせ（回数）</span>
+									<span class="text-field-label">むせ(回数)</span>
 									<input class="text-field-input" type="number" name="choke">
 								</label>
 							</li>
@@ -346,11 +346,11 @@
 							</li>
 						</ul>
 					</section>
+					<div class="form-footer mt-2 mb-5 text-right">
+						<button class="btn btn-secondary fs14">戻る</button>
+						<button class="btn btn-primary fs14">次へ</button>
+					</div>
 				</section>
-				<div class="form-footer mt-2 mb-5 float-right">
-					<button class="btn btn-secondary">戻る</button>
-					<button class="btn btn-primary">次へ</button>
-				</div>
 			</article>
 		</main>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

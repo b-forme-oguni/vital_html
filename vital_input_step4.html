@@ -22,14 +22,14 @@
 			</nav>
 		</header>
 		<main class="container">
-			<ul class="progressbar list-unstyled d-flex justify-content-center mt-4">
-				<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
-				<li class="w-25 position-relative text-center fs12 active">排泄記録</li>
-				<li class="w-25 position-relative text-center fs12 active">状態</li>
-				<li class="w-25 position-relative text-center fs12 active">確認</li>
-			</ul>
-			<article class="vital_input clearfix">
-				<section class="mt-4">
+			<article class="vital_input row justify-content-center">
+				<section class="mt-4 col-md-10">
+					<ul class="progressbar list-unstyled d-flex justify-content-center">
+						<li class="w-25 position-relative text-center fs12 active">バイタル記録</li>
+						<li class="w-25 position-relative text-center fs12 active">排泄記録</li>
+						<li class="w-25 position-relative text-center fs12 active">状態</li>
+						<li class="w-25 position-relative text-center fs12 active">確認</li>
+					</ul>
 					<h2 class="border-bottom border-secondary pb-2 mb-3">確認</h2>
 					<section class="mt-4">
 						<h3>利用者</h3>
@@ -37,7 +37,13 @@
 							<li class="col-md-4">
 								<label class="text-field fill">
 									<span class="text-field-label">名前</span>
-									<p class="text-field-input">山田太郎</p>
+									<select class="text-field-input" name="user_id" disabled>
+										<option value="" disabled>-</option>
+										<option value="1" selected>小国亮介</option>
+										<option value="2">山田太郎</option>
+										<option value="3">田中太郎</option>
+										<option value="4">鈴木一郎</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-2 col-6">
@@ -66,7 +72,7 @@
 							<li class="col-md-4">
 								<label class="text-field fill">
 									<span class="text-field-label">日付</span>
-									<p class="text-field-input">2020/07/26</p>
+									<input class="text-field-input" type="date" name="weather_record_id" value="2020-07-26" disabled>
 								</label>
 							</li>
 							<li class="col-md-4">
@@ -78,26 +84,26 @@
 							<li class="w-100"></li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">気温（外気）</span>
-									<p class="text-field-input">31℃</p>
+									<span class="text-field-label">外気温(℃)</span>
+									<p class="text-field-input">31</p>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">気温（内気）</span>
-									<p class="text-field-input">31℃</p>
+									<span class="text-field-label">内気温(℃)</span>
+									<p class="text-field-input">31</p>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">湿度（外気）</span>
-									<p class="text-field-input">70％</p>
+									<span class="text-field-label">外湿度(％)</span>
+									<p class="text-field-input">70</p>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">湿度（内気）</span>
-									<p class="text-field-input">60％</p>
+									<span class="text-field-label">内湿度(％)</span>
+									<p class="text-field-input">60</p>
 								</label>
 							</li>
 						</ul>
@@ -107,45 +113,50 @@
 						<ul class="row list-unstyled">
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">体温</span>
-									<p class="text-field-input">36.5℃</p>
+									<span class="text-field-label">体温(℃)</span>
+									<input class="text-field-input" type="number" name="body_temp" value="36.5" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">脈拍</span>
-									<p class="text-field-input">90</p>
+									<span class="text-field-label">脈拍(bpm)</span>
+									<input class="text-field-input" type="number" name="pulse" value="90" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">呼吸頻度</span>
-									<p class="text-field-input">ふつう</p>
+									<select class="text-field-input" name="breath" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">多い</option>
+										<option value="2" selected>ふつう</option>
+										<option value="3">少ない</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">SPO2</span>
-									<p class="text-field-input">120</p>
+									<span class="text-field-label">SPO2(％)</span>
+									<input class="text-field-input" type="number" name="spo2" value="120" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">血圧（拡張）</span>
-									<p class="text-field-input">80</p>
+									<span class="text-field-label">血圧(拡張)</span>
+									<input class="text-field-input" type="number" name="dbp" value="80" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">血圧（収縮）</span>
-									<p class="text-field-input">120</p>
+									<span class="text-field-label">血圧(収縮)</span>
+									<input class="text-field-input" type="number" name="sbp" value="120" disabled>
 								</label>
 							</li>
 							<li class="w-100"></li>
 							<li class="col-md-12">
 								<label class="text-field fill">
 									<span class="text-field-label">バイタル備考</span>
-									<p class="text-field-input">特になし</p>
+									<input class="text-field-input" type="text" name="vital_note" value="特になし" disabled>
 								</label>
 							</li>
 						</ul>
@@ -156,67 +167,108 @@
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">体調</span>
-									<p class="text-field-input">よい</p>
+									<select class="text-field-input" name="condition" disabled>
+										<option value="" disabled>-</option>
+										<option value="1" selected>よい</option>
+										<option value="2">ふつう</option>
+										<option value="3">よくない</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">機嫌</span>
-									<p class="text-field-input">よくない</p>
+									<select class="text-field-input" name="mood" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">よい</option>
+										<option value="2">ふつう</option>
+										<option value="3" selected>よくない</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">睡眠</span>
-									<p class="text-field-input">時々起きた</p>
+									<select class="text-field-input" name="sleep" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">よく寝た</option>
+										<option value="2" selected>時々起きた</option>
+										<option value="3">不眠</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">朝食</span>
-									<p class="text-field-input">少し食べた</p>
+									<select class="text-field-input" name="breakfast" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">食べた</option>
+										<option value="2" selected>少し食べた</option>
+										<option value="3">食べていない</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">昼食</span>
-									<p class="text-field-input">有</p>
+									<select class="text-field-input" name="lunch" disabled>
+										<option value="false">無</option>
+										<option value="true" selected>有</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">昼食量</span>
-									<p class="text-field-input">7～9割</p>
+									<select class="text-field-input" name="lunch_amount" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">1～3割</option>
+										<option value="2">4～6割</option>
+										<option value="3" selected>7～9割</option>
+										<option value="4">10割</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">昼食開始時間</span>
-									<p class="text-field-input">12:30</p>
+									<input type="time" class="timselect ui-timepicker-input text-field-input" step="600" name="lunch_start" value="12:30" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">昼食終了時間</span>
-									<p class="text-field-input">13:30</p>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="lunch_end" value="13:30" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">おやつ</span>
-									<p class="text-field-input">有</p>
+									<select class="text-field-input" name="snack" disabled>
+										<option value="false">無</option>
+										<option value="true" selected>有</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">おやつ時間</span>
-									<p class="text-field-input">15:30</p>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="snack_time" value="15:30" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">摂取水分量</span>
-									<p class="text-field-input">50～100ml</p>
+									<select class="text-field-input" name="water_intake" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">0～50ml</option>
+										<option value="2" selected>50～100ml</option>
+										<option value="3">100～150ml</option>
+										<option value="4">150～200ml</option>
+										<option value="5">200～300ml</option>
+										<option value="6">300～400ml</option>
+										<option value="7">500ml～</option>
+									</select>
 								</label>
 							</li>
 						</ul>
@@ -229,19 +281,25 @@
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排尿量１</span>
-											<p class="text-field-input">多い</p>
+											<select class="text-field-input" name="voiding_vol1" disabled>
+												<option value="1" selected>多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4">ない</option>
+												<option value="5">その他</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排尿時間１</span>
-											<p class="text-field-input">10:30</p>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="voiding_time1" value="10:30" disabled>
 										</label>
 									</li>
 									<li class="col-md-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排尿その他１</span>
-											<p class="text-field-input">特になし</p>
+											<input class="text-field-input" type="text" name="voiding_memo1" value="特になし" disabled>
 										</label>
 									</li>
 								</ul>
@@ -249,19 +307,25 @@
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排尿量２</span>
-											<p class="text-field-input">ふつう</p>
+											<select class="text-field-input" name="voiding_vol2" disabled>
+												<option value="1">多い</option>
+												<option value="2" selected>ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4">ない</option>
+												<option value="5">その他</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排尿時間２</span>
-											<p class="text-field-input">16:30</p>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="voiding_time2" value="16:30" disabled>
 										</label>
 									</li>
 									<li class="col-md-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排尿その他２</span>
-											<p class="text-field-input">特になし</p>
+											<input class="text-field-input" type="text" name="voiding_memo2" value="特になし" disabled>
 										</label>
 									</li>
 								</ul>
@@ -269,19 +333,25 @@
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排尿量３</span>
-											<p class="text-field-input">ない</p>
+											<select class="text-field-input" name="voiding_vol3" disabled>
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排尿時間３</span>
-											<p class="text-field-input"></p>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="voiding_time3" disabled>
 										</label>
 									</li>
 									<li class="col-md-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排尿その他３</span>
-											<p class="text-field-input"></p>
+											<input class="text-field-input" type="text" name="voiding_memo3" disabled>
 										</label>
 									</li>
 								</ul>
@@ -296,19 +366,25 @@
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排便量１</span>
-											<p class="text-field-input">少ない</p>
+											<select class="text-field-input" name="defecation_vol1" disabled>
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3" selected>少ない</option>
+												<option value="4">ない</option>
+												<option value="5">その他</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排便時間１</span>
-											<p class="text-field-input">18:20</p>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="defecation_time1" value="18:20" disabled>
 										</label>
 									</li>
 									<li class="col-md-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排便その他１</span>
-											<p class="text-field-input">特になし</p>
+											<input class="text-field-input" type="text" name="defecation_memo1" value="特になし" disabled>
 										</label>
 									</li>
 								</ul>
@@ -316,19 +392,25 @@
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排便量２</span>
-											<p class="text-field-input">ない</p>
+											<select class="text-field-input" name="defecation_vol2" disabled>
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排便時間２</span>
-											<p class="text-field-input"></p>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="defecation_time2" disabled>
 										</label>
 									</li>
 									<li class="col-md-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排便その他２</span>
-											<p class="text-field-input"></p>
+											<input class="text-field-input" type="text" name="defecation_memo2" disabled>
 										</label>
 									</li>
 								</ul>
@@ -336,34 +418,40 @@
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排便量３</span>
-											<p class="text-field-input">ない</p>
+											<select class="text-field-input" name="defecation_vol3" disabled>
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排便時間３</span>
-											<p class="text-field-input"></p>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="defecation_time3" disabled>
 										</label>
 									</li>
 									<li class="col-md-6">
 										<label class="text-field fill">
 											<span class="text-field-label">排便その他３</span>
-											<p class="text-field-input"></p>
+											<input class="text-field-input" type="text" name="defecation_memo3" disabled>
 										</label>
 									</li>
 								</ul>
 							</li>
 							<li class="col-md-3">
 								<label class="text-field fill">
-									<span class="text-field-label">排便量合計（g）</span>
-									<p class="text-field-input">320g</p>
+									<span class="text-field-label">排便量合計(g)</span>
+									<input class="text-field-input" type="number" name="total_defecation" value="320" disabled>
 								</label>
 							</li>
 							<li class="w-100"></li>
 							<li class="col-md-12">
 								<label class="text-field fill">
 									<span class="text-field-label">排泄備考</span>
-									<p class="text-field-input">特になし</p>
+									<input class="text-field-input" type="text" name="excretion_note" value="特になし" disabled>
 								</label>
 							</li>
 						</ul>
@@ -374,25 +462,31 @@
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">服薬</span>
-									<p class="text-field-input">有</p>
+									<select class="text-field-input" name="medicine" disabled>
+										<option value="false">無</option>
+										<option value="true" selected>有</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">服薬時間</span>
-									<p class="text-field-input">12:10</p>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="medicine_time" value="12:10" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">嘔吐</span>
-									<p class="text-field-input">有</p>
+									<select class="text-field-input" name="vomiting" disabled>
+										<option value="false">無</option>
+										<option value="true" selected>有</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">嘔吐時間</span>
-									<p class="text-field-input">12:50</p>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="vomiting_time" value="12:50" disabled>
 								</label>
 							</li>
 						</ul>
@@ -405,25 +499,39 @@
 									<li class="col-md-3">
 										<label class="text-field fill">
 											<span class="text-field-label">発作１</span>
-											<p class="text-field-input">ふつう</p>
+											<select class="text-field-input" name="attack1" disabled>
+												<option value="1">多い</option>
+												<option value="2" selected>ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4">ない</option>
+												<option value="5">その他</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-2 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">発作時間１</span>
-											<p class="text-field-input">9:50</p>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="attack_time1" value="09:50" disabled>
 										</label>
 									</li>
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">発作継続時間１</span>
-											<p class="text-field-input">30～60秒</p>
+											<select class="text-field-input" name="attack_duration1" disabled>
+												<option value="" disabled>-</option>
+												<option value="1">～5秒</option>
+												<option value="2">5～10秒</option>
+												<option value="3">10～15秒</option>
+												<option value="4">15～30秒</option>
+												<option value="5" selected>30～60秒</option>
+												<option value="6">60秒～</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-4">
 										<label class="text-field fill">
 											<span class="text-field-label">その他１</span>
-											<p class="text-field-input">特になし</p>
+											<input class="text-field-input" type="text" name="attack_memo1" value="特になし" disabled>
 										</label>
 									</li>
 								</ul>
@@ -431,25 +539,39 @@
 									<li class="col-md-3">
 										<label class="text-field fill">
 											<span class="text-field-label">発作２</span>
-											<p class="text-field-input">ない</p>
+											<select class="text-field-input" name="attack2" disabled>
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-2 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">発作時間２</span>
-											<p class="text-field-input"></p>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="attack_time2" disabled>
 										</label>
 									</li>
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">発作継続時間２</span>
-											<p class="text-field-input"></p>
+											<select class="text-field-input" name="attack_duration2" disabled>
+												<option value="" disabled selected>-</option>
+												<option value="1">～5秒</option>
+												<option value="2">5～10秒</option>
+												<option value="3">10～15秒</option>
+												<option value="4">15～30秒</option>
+												<option value="5">30～60秒</option>
+												<option value="6">60秒～</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-4">
 										<label class="text-field fill">
 											<span class="text-field-label">その他２</span>
-											<p class="text-field-input"></p>
+											<input class="text-field-input" type="text" name="attack_memo2" disabled>
 										</label>
 									</li>
 								</ul>
@@ -457,25 +579,39 @@
 									<li class="col-md-3">
 										<label class="text-field fill">
 											<span class="text-field-label">発作３</span>
-											<p class="text-field-input">ない</p>
+											<select class="text-field-input" name="attack3" disabled>
+												<option value="1">多い</option>
+												<option value="2">ふつう</option>
+												<option value="3">少ない</option>
+												<option value="4" selected>ない</option>
+												<option value="5">その他</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-2 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">発作時間３</span>
-											<p class="text-field-input"></p>
+											<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="attack_time3" disabled>
 										</label>
 									</li>
 									<li class="col-md-3 col-6">
 										<label class="text-field fill">
 											<span class="text-field-label">発作継続時間３</span>
-											<p class="text-field-input"></p>
+											<select class="text-field-input" name="attack_duration3" disabled>
+												<option value="" disabled selected>-</option>
+												<option value="1">～5秒</option>
+												<option value="2">5～10秒</option>
+												<option value="3">10～15秒</option>
+												<option value="4">15～30秒</option>
+												<option value="5">30～60秒</option>
+												<option value="6">60秒～</option>
+											</select>
 										</label>
 									</li>
 									<li class="col-md-4">
 										<label class="text-field fill">
 											<span class="text-field-label">その他３</span>
-											<p class="text-field-input"></p>
+											<input class="text-field-input" type="text" name="attack_memo3" disabled>
 										</label>
 									</li>
 								</ul>
@@ -488,37 +624,58 @@
 							<li class="col-md-15">
 								<label class="text-field fill">
 									<span class="text-field-label">吸引</span>
-									<p class="text-field-input">有</p>
+									<select class="text-field-input" name="aspiration" disabled>
+										<option value="false">無</option>
+										<option value="true" selected>有</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-15 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">吸引時間</span>
-									<p class="text-field-input">14:10</p>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="aspiration_time" value="14:10" disabled>
 								</label>
 							</li>
 							<li class="col-md-15 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">吸引場所</span>
-									<p class="text-field-input">気管カニューレ</p>
+									<select class="text-field-input" name="aspiration_point" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">口</option>
+										<option value="2">鼻</option>
+										<option value="3" selected>気管カニューレ</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-15 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">吸引物色</span>
-									<p class="text-field-input">赤褐色</p>
+									<select class="text-field-input" name="aspiration_color" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">透明</option>
+										<option value="2">白</option>
+										<option value="3">黄</option>
+										<option value="4">緑</option>
+										<option value="5" selected>赤褐色</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-15 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">吸引質</span>
-									<p class="text-field-input">膿性</p>
+									<select class="text-field-input" name="aspiration_type" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">しょう液性</option>
+										<option value="2">粘ちょう性</option>
+										<option value="3" selected>膿性</option>
+										<option value="4">血性</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-12">
 								<label class="text-field fill">
 									<span class="text-field-label">吸引備考</span>
-									<p class="text-field-input">特になし</p>
+									<input class="text-field-input" type="text" name="aspiration_note" value="特になし" disabled>
 								</label>
 							</li>
 						</ul>
@@ -529,37 +686,54 @@
 							<li class="col-md-15">
 								<label class="text-field fill">
 									<span class="text-field-label">注入</span>
-									<p class="text-field-input">有</p>
+									<select class="text-field-input" name="injection" disabled>
+										<option value="false">無</option>
+										<option value="true" selected>有</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-15 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">注入開始時間</span>
-									<p class="text-field-input">8:10</p>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="injection_start" value="08:10" disabled>
 								</label>
 							</li>
 							<li class="col-md-15 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">注入終了時間</span>
-									<p class="text-field-input">8:40</p>
+									<input type="time" class="timeselect ui-timepicker-input text-field-input" step="600" name="injection_end" value="08:40" disabled>
 								</label>
 							</li>
 							<li class="col-md-15 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">注入場所</span>
-									<p class="text-field-input">胃</p>
+									<select class="text-field-input" name="injection_point" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">鼻</option>
+										<option value="2" selected>胃</option>
+										<option value="3">腸</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-15 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">注入量</span>
-									<p class="text-field-input">200～300ml</p>
+									<select class="text-field-input" name="injection_vol" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">0～50ml</option>
+										<option value="2">50～100ml</option>
+										<option value="3">100～150ml</option>
+										<option value="4">150～200ml</option>
+										<option value="5" selected>200～300ml</option>
+										<option value="6">300～400ml</option>
+										<option value="7">500ml～</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-12">
 								<label class="text-field fill">
 									<span class="text-field-label">注入備考</span>
-									<p class="text-field-input">特になし</p>
+									<input class="text-field-input" type="text" name="injection_note" value="特になし" disabled>
 								</label>
 							</li>
 						</ul>
@@ -569,29 +743,39 @@
 						<ul class="row list-unstyled">
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
-									<span class="text-field-label">むせ（回数）</span>
-									<p class="text-field-input">12回</p>
+									<span class="text-field-label">むせ(回数)</span>
+									<input class="text-field-input" type="number" name="choke" value="60" disabled>
 								</label>
 							</li>
 							<li class="col-md-3 col-6">
 								<label class="text-field fill">
 									<span class="text-field-label">歩数</span>
-									<p class="text-field-input">150～200歩</p>
+									<select class="text-field-input" name="step" disabled>
+										<option value="" disabled>-</option>
+										<option value="1">0～50歩</option>
+										<option value="2">50～100歩</option>
+										<option value="3">100～150歩</option>
+										<option value="4" selected>150～200歩</option>
+										<option value="5">200～300歩</option>
+										<option value="6">300～400歩</option>
+										<option value="7">500～1000歩</option>
+										<option value="8">1000歩～</option>
+									</select>
 								</label>
 							</li>
 							<li class="col-md-12">
 								<label class="text-field fill">
 									<span class="text-field-label">注入備考</span>
-									<p class="text-field-input">特になし</p>
+									<input class="text-field-input" type="text" name="medical_note" value="特になし" disabled>
 								</label>
 							</li>
 						</ul>
 					</section>
+					<div class="form-footer mt-2 mb-5 text-right">
+						<button class="btn btn-secondary fs14">戻る</button>
+						<button class="btn btn-primary fs14">登録</button>
+					</div>
 				</section>
-				<div class="form-footer mt-2 mb-5 float-right">
-					<button class="btn btn-secondary">戻る</button>
-					<button class="btn btn-primary">次へ</button>
-				</div>
 			</article>
 		</main>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

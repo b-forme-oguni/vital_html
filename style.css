@@ -117,6 +117,12 @@
 .fill .text-field-input {
   margin-bottom: 0;
 }
+input.text-field-input:disabled,
+select.text-field-input:disabled {
+  color: #212529;
+	opacity: 1;
+	appearance: none;
+}
 
 /* nav */
 header nav {

@@ -138,16 +138,11 @@ header nav h1 a:hover {
 
 /* top_menu */
 .top_menu ul a {
-  padding-top: 100%;
+  padding-top: 4rem;
 }
 .top_menu ul a:hover {
   text-decoration: transparent;
   opacity: 0.6;
-}
-@media (max-width: 767px) {
-  .top_menu ul a {
-    padding-top: 4rem;
-  }
 }
 .top_menu ul a span {
   top: 50%;
